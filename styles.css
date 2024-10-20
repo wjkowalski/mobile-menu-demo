@@ -1,0 +1,96 @@
+html {
+    background-color: white;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    height: 100vh;
+    min-width: 350px;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #333;
+}
+
+header {
+    height: 5rem;
+    padding: 0;
+    background-color: #333;
+}
+
+.section {
+    height: 150vh;
+    width: 100%;
+    background-color: grey;
+    border: 1px solid black;
+}
+
+#section1 { background-color: red ;}
+#section2 { background-color: blue ;}
+#section3 { background-color: #bada55 ;}
+#section4 { background-color: purple ;}
+#section5 { background-color: orange ;}
+
+#hamburger {
+    border: 1px solid white;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem auto;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+}
+
+.hamline {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+}
+
+#mobileMenu {
+    position: relative;
+    color: white;
+    background-color: #333;
+    z-index: 10;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .200s ease-in-out;
+}
+
+#desktopMenu {
+    display: none;
+}
+
+.menuItem {
+    color: white;
+    font-size: 2rem;
+    display: block;    
+    width: fit-content;
+    margin: 15% auto;
+}
+
+.menuItem:last-child {
+    margin-bottom: 2rem;
+}
+
+@media(min-width:651px){
+    #mobileMenu, #hamburger {
+        display: none;
+    }
+    #desktopMenu {
+        display: flex;
+        justify-content: space-around;
+    }
+    body {
+        max-width: 1920px;
+    }
+    .menuItem {
+        margin: 0;
+    }
+}
+
